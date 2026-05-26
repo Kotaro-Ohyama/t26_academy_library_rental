@@ -37,7 +37,7 @@
                         <label class="input_title" for="expectedRentalOn">貸出予定日<span
                                 class="text-red asterisk">＊</span></label>
                         <input type="date" id="expectedRentalOn" class="form_input" th:field="*{expectedRentalOn}"
-                            placeholder="貸出予定日を入力" required>
+                            placeholder="貸出予定日を入力" min="1000-01-01" max="9999-12-31" required>
                         <div class="error_msg" th:if="${#fields.hasErrors('expectedRentalOn')}"
                             th:errors="*{expectedRentalOn}"></div>
                     </div>
@@ -45,7 +45,7 @@
                         <label class="input_title" for="expectedReturnOn">返却予定日<span
                                 class="text-red asterisk">＊</span></label>
                         <input type="date" id="expectedReturnOn" class="form_input" th:field="*{expectedReturnOn}"
-                            placeholder="返却予定日を入力" required>
+                            placeholder="返却予定日を入力" min="1000-01-01" max="9999-12-31" required>
                         <div class="error_msg" th:if="${#fields.hasErrors('expectedReturnOn')}" th:errors="*{expectedReturnOn}"></div>
                     </div>
                     <div class="mb30">
